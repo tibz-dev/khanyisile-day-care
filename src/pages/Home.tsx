@@ -1,10 +1,6 @@
 function Home() {
   return (
-    <section
-      id="home"
-      aria-labelledby="home-title"
-      className="scroll-mt-36 overflow-hidden"
-    >
+    <section id="home" aria-labelledby="home-title" className="scroll-mt-36 overflow-hidden">
       <div className="page-container py-12 sm:py-16 lg:py-24">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div>

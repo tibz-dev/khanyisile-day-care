@@ -1,23 +1,15 @@
 import About from '../pages/About';
 import Home from '../pages/Home';
+import Programs from '../pages/Programs';
 
 function SiteContent() {
   return (
     <>
       <Home />
       <About />
+      <Programs />
 
-      <div className="page-container space-y-6 py-12 sm:py-16">
-        <section
-          id="programs"
-          aria-labelledby="programs-title"
-          className="surface-card scroll-mt-36"
-        >
-          <h2 id="programs-title" className="text-3xl font-bold text-maroon">
-            Programs &amp; Extra Classes
-          </h2>
-        </section>
-
+      <div className="page-container space-y-6 pb-12 sm:pb-16">
         <section
           id="enrollment"
           aria-labelledby="enrollment-title"
@@ -36,18 +28,12 @@ function SiteContent() {
           </a>
         </section>
 
-        <section
-          id="contact"
-          aria-labelledby="contact-title"
-          className="surface-card scroll-mt-36"
-        >
+        <section id="contact" aria-labelledby="contact-title" className="surface-card scroll-mt-36">
           <h2 id="contact-title" className="text-3xl font-bold text-maroon">
             Let’s chat about your little one
           </h2>
 
-          <p className="mt-4">
-            Get in touch with Khanyisile Child Care &amp; Extra Classes.
-          </p>
+          <p className="mt-4">Get in touch with Khanyisile Child Care &amp; Extra Classes.</p>
 
           <address className="mt-6 space-y-4 not-italic">
             <p>Ga Matshwi, Greater Letaba Municipality, Limpopo</p>

@@ -14,9 +14,7 @@ function Logo({ className = '' }: LogoProps) {
       />
 
       <div className="min-w-0">
-        <p className="font-heading text-2xl leading-tight font-bold text-maroon">
-          Khanyisile
-        </p>
+        <p className="font-heading text-2xl leading-tight font-bold text-maroon">Khanyisile</p>
 
         <p className="text-xs leading-relaxed font-medium text-charcoal sm:text-sm">
           Child Care &amp; Extra Classes

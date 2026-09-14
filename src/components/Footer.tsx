@@ -17,9 +17,7 @@ function Footer() {
           <div>
             <Logo />
 
-            <p className="mt-5 text-sm text-charcoal">
-              Ga Matshwi, Limpopo, South Africa
-            </p>
+            <p className="mt-5 text-sm text-charcoal">Ga Matshwi, Limpopo, South Africa</p>
           </div>
 
           <nav aria-label="Footer navigation">

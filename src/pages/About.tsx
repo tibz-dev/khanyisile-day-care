@@ -2,8 +2,7 @@ const values = [
   {
     number: '01',
     title: 'Care comes first',
-    description:
-      'We believe every child deserves kindness, patience, and a sense of belonging.',
+    description: 'We believe every child deserves kindness, patience, and a sense of belonging.',
   },
   {
     number: '02',
@@ -44,25 +43,23 @@ function About() {
               className="mt-4 text-3xl font-bold text-maroon sm:text-4xl lg:text-5xl"
             >
               Small beginnings.
-              <br />
-              A world of possibility.
+              <br />A world of possibility.
             </h2>
 
             <p className="mt-6 leading-relaxed">
-              Since 2013, Khanyisile Child Care &amp; Extra Classes has been part of the Ga
-              Matshwi community, helping its youngest members take their first steps into
-              learning.
+              Since 2013, Khanyisile Child Care &amp; Extra Classes has been part of the Ga Matshwi
+              community, helping its youngest members take their first steps into learning.
             </p>
 
             <p className="mt-4 leading-relaxed">
-              Based in Ga Matshwi, within Greater Letaba Municipality in Limpopo, our centre
-              is led by Principal DL Mawila. We believe a child’s early years are a time to
-              explore, ask questions, make friends, and discover just how much they can do.
+              Based in Ga Matshwi, within Greater Letaba Municipality in Limpopo, our centre is led
+              by Principal DL Mawila. We believe a child’s early years are a time to explore, ask
+              questions, make friends, and discover just how much they can do.
             </p>
 
             <p className="mt-4 leading-relaxed">
-              From little discoveries to proud “I did it!” moments, we want learning to feel
-              joyful and meaningful—for children and the families growing alongside them.
+              From little discoveries to proud “I did it!” moments, we want learning to feel joyful
+              and meaningful—for children and the families growing alongside them.
             </p>
 
             <div className="mt-7 inline-flex items-center gap-3 rounded-2xl bg-cream px-5 py-4">
@@ -89,8 +86,8 @@ function About() {
 
             <p className="mt-4 leading-relaxed">
               To nurture curious minds and confident little learners through care, play, and
-              meaningful early learning, working alongside families to help every child build
-              a strong foundation for the years ahead.
+              meaningful early learning, working alongside families to help every child build a
+              strong foundation for the years ahead.
             </p>
 
             <div className="mt-7 border-t border-maroon/20 pt-7">
@@ -110,10 +107,7 @@ function About() {
                 key={value.number}
                 className="rounded-2xl border border-maroon/10 bg-cream p-6"
               >
-                <span
-                  aria-hidden="true"
-                  className="font-heading text-3xl font-bold text-maroon"
-                >
+                <span aria-hidden="true" className="font-heading text-3xl font-bold text-maroon">
                   {value.number}
                 </span>
 
