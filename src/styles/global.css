@@ -1,17 +1,128 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@import 'tailwindcss';
+
+@theme {
+  --color-maroon: #7a1e2b;
+  --color-gold: #e8a93c;
+  --color-coral: #f4a896;
+  --color-cream: #fdf6ec;
+  --color-charcoal: #2e2a26;
+
+  --font-sans: 'Poppins', sans-serif;
+  --font-heading: 'Baloo 2', sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+@layer base {
+  body {
+    margin: 0;
+    background-color: var(--color-cream);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+
+  button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-maroon);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-charcoal);
+  }
 }
 
-.setup-page {
-  max-width: 60rem;
-  margin-inline: auto;
-  padding: 2rem 1rem;
+@layer components {
+  .page-container {
+    width: 100%;
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .surface-card {
+    border: 1px solid var(--color-coral);
+    border-radius: 1.5rem;
+    background-color: white;
+    padding: 1.5rem;
+  }
+
+  .button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: 2px solid transparent;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button-primary {
+    background-color: var(--color-maroon);
+    color: var(--color-cream);
+  }
+
+  .button-primary:hover {
+    background-color: var(--color-charcoal);
+  }
+
+  .button-secondary {
+    background-color: var(--color-gold);
+    color: var(--color-charcoal);
+  }
+
+  .button-secondary:hover {
+    background-color: var(--color-coral);
+  }
+
+  .button-outline {
+    border-color: var(--color-maroon);
+    background-color: transparent;
+    color: var(--color-maroon);
+  }
+
+  .button-outline:hover {
+    background-color: var(--color-maroon);
+    color: var(--color-cream);
+  }
+
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  @media (min-width: 768px) {
+    .page-container {
+      padding-inline: 2rem;
+    }
+
+    .surface-card {
+      padding: 2rem;
+    }
+  }
 }
