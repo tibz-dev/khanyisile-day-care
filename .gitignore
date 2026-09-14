@@ -37,3 +37,12 @@ pnpm-debug.log*
 # Operating system files
 .DS_Store
 Thumbs.db
+khanyisile-website-d7baf6e1424c.json
+
+# Generated gallery files
+public/gallery/
+.gallery-sync-*/
+
+# Local service account keys
+*service-account*.json
+khanyisile-website-*.json
