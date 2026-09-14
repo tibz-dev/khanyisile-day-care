@@ -46,3 +46,6 @@ public/gallery/
 # Local service account keys
 *service-account*.json
 khanyisile-website-*.json
+.vercel/
+.vercel
+.env*

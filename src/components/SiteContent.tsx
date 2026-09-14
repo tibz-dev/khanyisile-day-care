@@ -1,7 +1,9 @@
 import About from '../pages/About';
+import Enrollment from '../pages/Enrollment';
 import Gallery from '../pages/Gallery';
 import Home from '../pages/Home';
 import Programs from '../pages/Programs';
+import Testimonials from '../pages/Testimonials';
 
 function SiteContent() {
   return (
@@ -10,33 +12,17 @@ function SiteContent() {
       <About />
       <Programs />
       <Gallery />
+      <Testimonials />
+      <Enrollment />
 
-      <div className="page-container space-y-6 py-12 sm:py-16">
-        <section
-          id="enrollment"
-          aria-labelledby="enrollment-title"
-          className="surface-card scroll-mt-36"
-        >
-          <h2 id="enrollment-title" className="text-3xl font-bold text-maroon">
-            Enrollment
-          </h2>
-
-          <p className="mt-4">
-            Online applications are coming soon. Contact us to enquire about enrollment.
-          </p>
-
-          <a href="tel:+27607423467" className="button button-primary mt-6">
-            Call to Enquire
-          </a>
-        </section>
-
+      <div className="page-container py-12 sm:py-16">
         <section
           id="contact"
           aria-labelledby="contact-title"
           className="surface-card scroll-mt-36"
         >
           <h2 id="contact-title" className="text-3xl font-bold text-maroon">
-            Let’s chat about your little one
+            Let&apos;s chat about your little one
           </h2>
 
           <p className="mt-4">

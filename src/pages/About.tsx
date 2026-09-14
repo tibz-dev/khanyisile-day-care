@@ -72,7 +72,7 @@ function About() {
 
               <div>
                 <p className="font-semibold text-maroon">DL Mawila</p>
-                <p className="text-sm">Principal</p>
+                <p className="text-sm">Principal & Founder</p>
               </div>
             </div>
           </div>

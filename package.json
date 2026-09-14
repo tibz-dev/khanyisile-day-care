@@ -13,8 +13,11 @@
     "gallery:sync": "node scripts/sync-gallery.mjs"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.9.1",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-hook-form": "^7.88.0",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -34,6 +37,7 @@
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.69.0",
+    "vercel": "^59.16.0",
     "vite": "^8.3.0"
   }
 }
