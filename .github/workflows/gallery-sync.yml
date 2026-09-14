@@ -1,0 +1,57 @@
+name: Gallery Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: gallery-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-and-build:
+    name: Sync photos and build website
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --include=optional
+
+      - name: Check code
+        run: npm run lint
+
+      - name: Sync Google Drive gallery
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_DRIVE_GALLERY_FOLDER_ID: ${{ vars.GOOGLE_DRIVE_GALLERY_FOLDER_ID }}
+        run: npm run gallery:sync
+
+      - name: Build website
+        run: npm run build
+
+      - name: Save website build
+        uses: actions/upload-artifact@v7
+        with:
+          name: khanyisile-website
+          path: dist/
+          if-no-files-found: error
+          retention-days: 1
